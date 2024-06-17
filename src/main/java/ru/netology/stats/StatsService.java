@@ -38,20 +38,22 @@ public class StatsService {
     }
 
     public long calculateAverageLessSales(long[] sales) {
+        long average = calculateAverageSales(sales);
         long lessAverage = 0;
         for (int l = 0; l < sales.length; l++) {
-            if (sales[l] < calculateAverageSales(sales)) {
-                 lessAverage = l;
+            if (sales[l]< average) {
+                lessAverage++;
             }
         }
         return lessAverage;
     }
 
     public long calculateAverageAboveSales(long[] sales) {
+        long average = calculateAverageSales(sales);
         long aboveAverage = 0;
         for (int a = 0; a < sales.length; a++) {
-            if (sales[a] > calculateAverageSales(sales)) {
-                aboveAverage = a;
+            if (sales[a]< average) {
+                aboveAverage++;
             }
         }
         return aboveAverage;

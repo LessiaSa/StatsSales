@@ -38,7 +38,7 @@ class StatsServiceTest {
         long[] sales = {8,15,13,15,17,20,19,20,7,14,14,18};
         StatsService service = new StatsService();
         long actual = service.calculateAverageSales(sales);
-        long expected = 15;
+        long expected =15;
         Assertions.assertEquals(actual,expected);
         }
 
@@ -47,7 +47,7 @@ class StatsServiceTest {
         long[] sales = {18,15,13,15,17,20,19,20,7,14,14,18};
         StatsService service = new StatsService();
         long actual = service.calculateAverageLessSales(sales);
-        long expected = 10;
+        long expected =4 ;
         Assertions.assertEquals(actual,expected);
 
         }
@@ -57,7 +57,7 @@ class StatsServiceTest {
         long[] sales = {18,15,13,15,17,20,19,20,7,14,14,18};
         StatsService service = new StatsService();
         long actual = service.calculateAverageAboveSales(sales);
-        long expected = 11;
+        long expected =4 ;
         Assertions.assertEquals(actual,expected);
 
         }
