@@ -57,7 +57,7 @@ class StatsServiceTest {
         long[] sales = {18,15,13,15,17,20,19,20,7,14,14,18};
         StatsService service = new StatsService();
         long actual = service.calculateAverageAboveSales(sales);
-        long expected = 4 ;
+        long expected = 6 ;
         Assertions.assertEquals(actual,expected);
 
         }
