@@ -13,9 +13,9 @@ public class StatsService {
 
     public int calculateMaxMonth(long[] sales) {
         int maxMonth = 0;
-        for (int m = 0; m < sales.length; m++) {
-            if (sales[m] >= sales[maxMonth]) {
-                maxMonth = m;
+        for (int i = 0; i < sales.length; i++) {
+            if (sales[i] >= sales[maxMonth]) {
+                maxMonth = i;
             }
         }
         return maxMonth + 1;
@@ -23,15 +23,15 @@ public class StatsService {
 
     public long calculateSumSales(long[] sales) {
         long sum = 0;
-        for (int s = 0; s < sales.length; s++) {
-            sum += sales[s];
+        for (int i = 0; i < sales.length; i++) {
+            sum += sales[i];
         }
         return sum;
 
     }
 
     public long calculateAverageSales(long[] sales) {
-        long sum = calculateSumSales(sales); ;
+        long sum = calculateSumSales(sales);
         long average = sum / sales.length;
 
         return average;
@@ -52,10 +52,11 @@ public class StatsService {
         long average = calculateAverageSales(sales);
         long aboveAverage = 0;
         for (int a = 0; a < sales.length; a++) {
-            if (sales[a]< average) {
+            if (sales[a] < average) {
                 aboveAverage++;
             }
         }
         return aboveAverage;
+
     }
 }
