@@ -41,12 +41,10 @@ public class StatsService {
         long average = calculateAverageSales(sales);
         long lessAverage = 0;
         int i = 0;
-        long l = i;
         for (; i < sales.length; i++) {
             if (sales[i] < average) {
                 lessAverage++;
             }
-            System.out.println(l);
         }
         return lessAverage;
     }
